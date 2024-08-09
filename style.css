@@ -226,7 +226,7 @@ display: flex;
 /* client section */
 #client-section{
     position: static;
-    /* height: 559px; */
+    height: 559px;
     
 }
 #client-section::before{
