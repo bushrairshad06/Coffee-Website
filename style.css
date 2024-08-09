@@ -42,10 +42,8 @@ margin: 3px 6px;
 
 }
 /* navigation bar: list styling*/
-#navbar{
-position: sticky;
 
-}
+
 #navbar ul{
     display: flex;
     font-family: "Baloo Bhaijaan 2", sans-serif;
@@ -69,6 +67,10 @@ font-size: 1.3rem;
     color: black;
    background-color: white;
 
+}
+.itom{
+    position: unset;
+    
 }
 /* Home section */
  #home{
@@ -115,7 +117,7 @@ display: flex;
 }
 #services .box {
     border: 2px solid rgb(111, 78, 55);
-    padding: 34px;
+    padding: 20px;
     margin: 0px 10px;
     border-radius: 28px;
     background: white;
@@ -186,7 +188,7 @@ display: flex;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-    padding: 40px 40px;
+    padding: 10px 30px;
     
 
 }
@@ -223,8 +225,9 @@ display: flex;
 
 /* client section */
 #client-section{
-    position: relative;
-    height: 344px;
+    position: static;
+    /* height: 559px; */
+    
 }
 #client-section::before{
     content:"";
@@ -251,7 +254,8 @@ display: flex;
 }
 /* contact section */
 #contact{
-    position: relative;
+    position: static;
+    
 }
 #contact::before{
     
@@ -323,7 +327,6 @@ footer{
 
 
 }
-/* media query */
 /* Mobile Devices */
 @media only screen and (max-width: 600px) {
     #navbar {
@@ -332,27 +335,80 @@ footer{
     #navbar ul {
         flex-direction: column;
     }
+    #navbar ul li a{
+        font-size: 1rem;
+        padding: 0px 6px;
+        padding-bottom: 8px;
+    }
     #home {
-        padding: 6px 20px;
+        height: 340px;
+        padding: 3px 20px;
     }
-    #services .box {
-        margin: 0px 0px;
+    #home p{
+        font-size: 12px;
     }
+    #services{
+        flex-direction: column;
+    }
+     #services .box {
+        margin: 0px 0px; 
+        padding: 14px;
+        margin: 2px 0px;
+        margin-bottom: 20px;
+    } 
+
     .about .row {
         flex-direction: column;
     }
     .menu .box-container {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        margin: 0px 0px; 
+        padding: 9px 0px;
+        margin: 2px 0px;
+        margin-bottom: 10px;
     }
-}
+    #clients{
+        flex-wrap: wrap;
+    }
+    #clients img{
+        width: 66px;
+        padding: 2px 6px;
+        height: auto;
+
+    }
+    .h-primary{
+        font-size: 25px;
+
+    }
+    .btn{
+        font-size: 12px;
+        padding: 4px 8px;
+
+    }
+    #contacts-box form{
+        width: 80%;
+    }
+
 
 /* Tablets */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
+   #navbar{
+    flex-direction: column;
+   }
+   #navbar ul{
+    flex-direction: column;
+   }
     #home {
         padding: 6px 100px;
     }
+    services{
+        flex-direction: column;
+    }
     #services .box {
-        margin: 0px 5px;
+        margin: 0px 0px; 
+        padding: 14px;
+        margin: 2px 15px;
+        margin-bottom: 20px;
     }
     .about .row {
         flex-direction: row;
@@ -360,10 +416,16 @@ footer{
     .menu .box-container {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
+    #clients{
+        
+    }
 }
 
 /* Desktops */
 @media only screen and (min-width: 993px) {
+   #navbar{
+    flex-direction: column;
+   }
     #home {
         padding: 6px 200px;
     }
@@ -377,5 +439,3 @@ footer{
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
 }
-
-
