@@ -17,7 +17,7 @@ html{
 #navbar{
     display: flex;
     align-items: center;
-     position: relative; 
+     position: sticky; 
     top: 0px;
 } 
 #navbar::before{
@@ -43,7 +43,7 @@ margin: 3px 6px;
 }
 /* navigation bar: list styling*/
 #navbar{
-/* position: sticky; */
+position: sticky;
 
 }
 #navbar ul{
